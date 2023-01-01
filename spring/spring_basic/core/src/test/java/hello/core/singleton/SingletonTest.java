@@ -33,6 +33,10 @@ public class SingletonTest {
         SingletonService singletonService1 = SingletonService.getInstance();
         SingletonService singletonService2 = SingletonService.getInstance();
 
+        //참조값이 같은 것을 확인
+        System.out.println("singletonService1 = " + singletonService1);
+        System.out.println("singletonService2 = " + singletonService2);
+
         Assertions.assertThat(singletonService1).isSameAs(singletonService2);
         // same 객체 비교 (==)
         // equal equals 메서드
@@ -51,7 +55,7 @@ public class SingletonTest {
         // 2. 조회: 호출 할 떄마다 객체 생성
         MemberService memberService2 = ac.getBean("memberService", MemberService.class);
 
-        // 참조값이 다르다
+        // 참조값이 같다
 //        System.out.println("memberService1 = " + memberService1);
 //        System.out.println("memberService2 = " + memberService2);
 
