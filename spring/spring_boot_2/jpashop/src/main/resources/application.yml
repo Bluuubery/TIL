@@ -13,6 +13,7 @@ spring:
 #        시스템 아웃풋을 통해서 나옴 사용 지양
 #        show_sql: true
         format_sql: true
+        default_batch_fetch_size: 100
 
 logging:
   level:
