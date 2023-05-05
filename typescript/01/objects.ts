@@ -39,5 +39,4 @@ const createUser = (user: User): User => {
 createUser({name: "", email: "", isActive: true})
 
 
-
 export {}
